@@ -8,8 +8,12 @@
 <div id="object"></div>
 <script type="text/JavaScript">
 document.getElementById("object").onclick = function(){
-	document.getElementById("object").style.display="none";
+	this.style.display="none";
 }
+setTimeout(function(){
+	alert("done");
+
+}, 3000);
 </script>
 
 </body>
