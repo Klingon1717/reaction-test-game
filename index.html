@@ -7,8 +7,12 @@
 <body>
 <div id="object"></div>
 <script type="text/JavaScript">
-alert(Date.now());
+var clickedTime;
+var createdTime;
+var reactionTime;
+Date.now();
 function makeBox(){
+	createdTime = Date.now();
 var time = Math.random();
 time = time * 5000;
 setTimeout(function(){
@@ -16,6 +20,7 @@ setTimeout(function(){
 	}, time);
 }
 document.getElementById("object").onclick = function(){
+	clickedTime = Date.now();
 	this.style.display="none";
 	makeBox();
 }
