@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-<p id="cap">Your time:</p>
+<p id="cap"></p>
 <div id="object"></div>
 <script type="text/JavaScript">
 var clickedTime;
@@ -23,7 +23,7 @@ setTimeout(function(){
 document.getElementById("object").onclick = function(){
 	clickedTime = Date.now();
 	reactionTime = (clickedTime-createdTime)/1000;
-	document.getElementById("cap").innerHTML=reactionTime;
+	document.getElementById("cap").innerHTML= "your time" + ' ' +  reactionTime;
 	this.style.display="none";
 	makeBox();
 }
