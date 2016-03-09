@@ -21,6 +21,8 @@ setTimeout(function(){
 }
 document.getElementById("object").onclick = function(){
 	clickedTime = Date.now();
+	reactionTime = (clickedTime-createdTime)/1000;
+	alert(reactionTime);
 	this.style.display="none";
 	makeBox();
 }
